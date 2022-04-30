@@ -1,0 +1,87 @@
+.navbar {
+    background-image: linear-gradient(175deg, #007cff 0, #0073ff 10%, #2869ff 20%, #715cff 30%, #984eff 40%, #b53cf2 50%, #cc22e1 60%, #df00cf 70%, #ed00bc 80%, #f900a8 90%, #ff0094 100%);
+    
+}
+
+.navbar h1{ 
+    margin-left: 50px;
+}
+
+main{ 
+    margin:auto;
+    max-width: 1800px; 
+    background-color: rgb(252, 252, 252);
+    min-height:70vh;
+}
+
+.footer {
+    position: relative;   /* posição absoluta */
+    bottom: 0;   /* Fixa a div no fim da página */
+    width: 100%;   /* Largura estende por toda página da div */
+    height: 10vh;   /* Altura da div */
+    background-color: #ff1decd7;
+    -webkit-box-shadow: -1px -2px 13px -6px #000000; 
+    box-shadow: -1px -2px 13px -6px #000000;
+}
+
+nav img { 
+    height: 100px;
+
+}
+
+nav h1{ 
+    font-size: 6rem;
+    margin: 0;
+    color: rgb(247, 247, 247);
+}   
+nav{ 
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 5px 5px 13px -6px #000000; 
+    box-shadow: 5px 5px 13px -6px #000000;
+
+}
+
+.titulo{ 
+    font-size: 3rem;
+}
+.carousel{ 
+    max-height: 900px;
+    overflow-y: hidden;
+
+}
+
+.carousel img{ 
+
+    max-width: 100%;
+    overflow: hidden;
+    
+}
+
+body{ 
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+.accordion-header{ 
+    background-color: rgb(204, 6, 178);
+}
+.accordion-body{ 
+    background-color: rgb(156, 6, 144);
+    color: aliceblue;
+}
+.accordion-button{ 
+    background-color: rgb(42, 109, 255);
+    color: aliceblue;
+}
+
+
+
+.login{
+    background-color: #2356ff;
+    color: whitesmoke;
+    border-radius: 3%;
+    -webkit-box-shadow: 5px 5px 13px -6px #000000; 
+    box-shadow: 5px 5px 13px -6px #000000;
+}
