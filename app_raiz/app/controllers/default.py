@@ -7,9 +7,6 @@ from app.models.tables import User
 from flask_login import login_user
 
 
-@login_manager.user_loader
-def load_user(user_id):
-    return User.get_id(user_id)  
 
 @app.route('/')
 def index(): 
