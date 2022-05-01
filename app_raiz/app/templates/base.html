@@ -9,6 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{url_for('static', filename= 'styles.css')}}">
     <title>Início</title>
+
+
 </head>
 <body>
     
@@ -28,6 +30,13 @@
                 <li><a class="dropdown-item" href="#">Cadastro</a></li>
                 <li><a class="dropdown-item" href="#">Contato</a></li>
                 <li><a class="dropdown-item" href="#">Sobre nós</a></li>
+                {% if current_user.is_authenticated %}
+                    <li><a class="dropdown-item" href=" {{ url_for('logout') }}">Logout</a></li>
+                {% else %}
+                    <li><a class="dropdown-item" href="{{ url_for('login') }}">Login</a></li>
+                {% endif %}
+
+
             </ul>
             </li>
         </ul>
@@ -62,4 +71,11 @@
 
 
 </body>
+    <style>
+        {% block styles %}
+       
+        {% endblock %}
+
+
+    </style>
 </html>

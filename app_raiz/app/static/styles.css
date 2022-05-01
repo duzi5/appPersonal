@@ -10,7 +10,7 @@
 main{ 
     margin:auto;
     max-width: 1800px; 
-    background-color: rgb(252, 252, 252);
+    background-color: rgba(252, 252, 252, 0);
     min-height:70vh;
 }
 
@@ -23,6 +23,12 @@ main{
     -webkit-box-shadow: -1px -2px 13px -6px #000000; 
     box-shadow: -1px -2px 13px -6px #000000;
 }
+
+.form-control{ 
+    background-color: #ffffff28;
+
+}
+
 
 nav img { 
     height: 100px;
@@ -79,7 +85,7 @@ body{
 
 
 .login{
-    background-color: #2356ff;
+    background-color: #2356ff1a;
     color: whitesmoke;
     border-radius: 3%;
     -webkit-box-shadow: 5px 5px 13px -6px #000000; 

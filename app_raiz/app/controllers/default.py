@@ -4,7 +4,7 @@ from flask import redirect, render_template, flash, url_for
 from app import app, db, login_manager
 from app.models.forms import formulario_login 
 from app.models.tables import User
-from flask_login import login_user
+from flask_login import login_user, logout_user
 
 
 
@@ -20,14 +20,22 @@ def login():
         user = User.query.filter_by(username = form.usuario.data).first()
         if user and user.senha == form.senha.data:
             login_user(user)
-            return redirect(url_for('index'))
+            flash('Logged in.')
+            print('estou logado')
+            user.is_autheticated = True
+            return redirect(url_for('inicio'))
         else: 
             flash('Login Inválido')
-            return 'cai aqui2'
+            return redirect(url_for('login'))
     return render_template('login.html', form = form)
 
-@app.route('/teste/<info>')
-@app.route('/teste', defaults = {'info':None})
-def teste(info): 
-   
-    return "ok"
+@app.route('/logout')
+def logout(): 
+    logout_user()
+    flash("Logged out.")
+    return redirect( url_for('index'))
+
+
+@app.route('/inicio')
+def inicio():
+    return render_template('inicio.html')
